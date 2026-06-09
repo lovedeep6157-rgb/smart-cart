@@ -1,0 +1,47 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  gap: 16px;
+}
+
+/* Dual-ring spinner */
+.spinner {
+  position: relative;
+  width: 44px;
+  height: 44px;
+}
+
+.spinner::before,
+.spinner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid transparent;
+}
+
+.spinner::before {
+  border-top-color: var(--primary);
+  border-right-color: var(--primary);
+  animation: spin 0.7s linear infinite;
+}
+
+.spinner::after {
+  border-bottom-color: #a5b4fc;
+  border-left-color: #a5b4fc;
+  animation: spin 0.7s linear infinite reverse;
+  opacity: 0.5;
+}
+
+.text {
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

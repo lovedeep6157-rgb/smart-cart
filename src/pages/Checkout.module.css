@@ -1,0 +1,319 @@
+/* ── Page ─────────────────────────────────────────────────────── */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 28px 52px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--text);
+}
+
+.sub {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin-top: 4px;
+  margin-bottom: 32px;
+}
+
+/* ── Empty state ──────────────────────────────────────────────── */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 96px 20px;
+  text-align: center;
+  color: var(--muted);
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  border: 1px dashed var(--border);
+}
+
+.empty span { font-size: 68px; opacity: 0.35; }
+.empty h2   { font-size: 20px; font-weight: 700; color: var(--text); }
+.empty p    { font-size: 14px; max-width: 280px; }
+
+/* ── Layout ───────────────────────────────────────────────────── */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 28px;
+  align-items: start;
+}
+
+/* ── Section cards (left column) ─────────────────────────────── */
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow-sm);
+}
+
+.section:last-child { margin-bottom: 0; }
+
+.sectionTitle {
+  font-size: 14.5px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Order item rows ──────────────────────────────────────────── */
+.itemRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 0;
+  border-bottom: 1px solid #f8fafc;
+}
+
+.itemRow:last-child { border-bottom: none; }
+
+.itemEmoji {
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #f0f0ff 0%, #e8f0fe 100%);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e0e7ff;
+}
+
+.itemInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemName {
+  display: block;
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itemMeta {
+  display: block;
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.itemTotal {
+  text-align: right;
+  min-width: 90px;
+}
+
+.origPrice {
+  display: block;
+  font-size: 11.5px;
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.discPrice {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ── Discount rows ────────────────────────────────────────────── */
+.discRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: var(--success-light);
+  border: 1px solid #a7f3d0;
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+  font-size: 13px;
+  transition: var(--transition-fast);
+}
+
+.discRow:hover { filter: brightness(0.98); }
+.discRow:last-child { margin-bottom: 0; }
+
+.discLabel  { color: #065f46; font-weight: 600; }
+.discAmount { color: var(--success); font-weight: 700; }
+
+/* Custom discount row */
+.customDiscRow {
+  background: var(--primary-light);
+  border-color: #c7d2fe;
+}
+.customDiscRow .discLabel  { color: #312e81; }
+.customDiscRow .discAmount { color: var(--primary); }
+
+/* Inactive rule row */
+.inactiveDiscRow {
+  background: #f8fafc;
+  border-color: var(--border);
+  opacity: 0.65;
+}
+.discLabelMuted  { color: var(--muted); font-weight: 500; font-size: 12px; font-style: italic; }
+.discAmountMuted { color: var(--muted); font-weight: 600; }
+
+/* Active custom rule chip */
+.ruleChip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--primary-light);
+  border: 1px solid #c7d2fe;
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  font-size: 12.5px;
+  margin-top: 0;
+}
+.ruleChipLabel { color: var(--muted); flex-shrink: 0; }
+.ruleChipValue { color: var(--primary); font-weight: 700; }
+
+/* ── Bill card (right column) ─────────────────────────────────── */
+.billCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  position: sticky;
+  top: 82px;
+  box-shadow: var(--shadow-sm);
+}
+
+.billRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding: 7px 0;
+  border-bottom: 1px solid #f8fafc;
+}
+
+.billRow:last-of-type { border-bottom: none; }
+
+.billLabel   { color: var(--muted); }
+.green       { color: var(--success); font-weight: 700; }
+.customGreen { color: var(--primary); font-weight: 700; }
+
+.finalBillRow {
+  font-size: 16px;
+  font-weight: 800;
+  padding-top: 14px;
+  margin-top: 6px;
+  border-top: 2px solid var(--border) !important;
+  border-bottom: none !important;
+}
+
+/* ── Final amount gradient box ────────────────────────────────── */
+.finalBox {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-mid) 100%);
+  border-radius: var(--radius-lg);
+  padding: 22px 20px;
+  text-align: center;
+  color: #fff;
+  margin: 18px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle shine effect */
+.finalBox::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: -20%;
+  width: 60%;
+  height: 180%;
+  background: linear-gradient(105deg, transparent, rgba(255,255,255,0.08), transparent);
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+.finalLabel  {
+  font-size: 10.5px;
+  opacity: 0.75;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.finalAmount {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.finalSaved {
+  font-size: 12px;
+  opacity: 0.85;
+  margin-top: 8px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 999px;
+  padding: 4px 14px;
+  display: inline-block;
+}
+
+.placeBtn { margin-top: 0; }
+
+/* ── Order confirmation ───────────────────────────────────────── */
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 88px 24px;
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.confIcon {
+  font-size: 76px;
+  animation: bounceIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes bounceIn {
+  from { transform: scale(0.4); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+.confirmation h2 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--text);
+}
+
+.confSub   { font-size: 15px; color: var(--muted); }
+.confSaved {
+  font-size: 15px;
+  color: var(--success);
+  font-weight: 700;
+  background: var(--success-light);
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: 1px solid #a7f3d0;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .page { padding: 24px 16px 40px; }
+  .layout { grid-template-columns: 1fr; }
+  .billCard { position: static; }
+}

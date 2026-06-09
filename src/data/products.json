@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Noise-Cancelling Headphones",
+    "category": "Electronics",
+    "price": 2999,
+    "stock": 8,
+    "emoji": "🎧",
+    "description": "Premium sound isolation with 30-hour battery life."
+  },
+  {
+    "id": 2,
+    "name": "Mechanical Keyboard",
+    "category": "Electronics",
+    "price": 3499,
+    "stock": 5,
+    "emoji": "⌨️",
+    "description": "Tactile switches with RGB backlighting."
+  },
+  {
+    "id": 3,
+    "name": "Stainless Steel Water Bottle",
+    "category": "Kitchen",
+    "price": 599,
+    "stock": 20,
+    "emoji": "🫗",
+    "description": "Double-walled insulation, keeps drinks cold 24 hrs."
+  },
+  {
+    "id": 4,
+    "name": "Yoga Mat Premium",
+    "category": "Fitness",
+    "price": 1299,
+    "stock": 12,
+    "emoji": "🧘",
+    "description": "Non-slip, extra thick 6mm cushioning."
+  },
+  {
+    "id": 5,
+    "name": "Graphic Novel Collection",
+    "category": "Books",
+    "price": 799,
+    "stock": 3,
+    "emoji": "📚",
+    "description": "Award-winning 5-volume series."
+  },
+  {
+    "id": 6,
+    "name": "Scented Candle Set",
+    "category": "Home",
+    "price": 499,
+    "stock": 0,
+    "emoji": "🕯️",
+    "description": "Set of 4 premium soy wax candles."
+  },
+  {
+    "id": 7,
+    "name": "Portable Bluetooth Speaker",
+    "category": "Electronics",
+    "price": 1999,
+    "stock": 6,
+    "emoji": "🔊",
+    "description": "360° surround sound, IPX7 waterproof."
+  },
+  {
+    "id": 8,
+    "name": "Leather Wallet",
+    "category": "Fashion",
+    "price": 1499,
+    "stock": 10,
+    "emoji": "👝",
+    "description": "Genuine leather, RFID blocking."
+  },
+  {
+    "id": 9,
+    "name": "Ceramic Coffee Mug Set",
+    "category": "Kitchen",
+    "price": 699,
+    "stock": 15,
+    "emoji": "☕",
+    "description": "Set of 4 handcrafted ceramic mugs."
+  },
+  {
+    "id": 10,
+    "name": "Resistance Band Kit",
+    "category": "Fitness",
+    "price": 849,
+    "stock": 0,
+    "emoji": "💪",
+    "description": "5-level resistance, includes carry bag."
+  },
+  {
+    "id": 11,
+    "name": "Plant Pot Set",
+    "category": "Home",
+    "price": 1199,
+    "stock": 7,
+    "emoji": "🪴",
+    "description": "Set of 3 terracotta pots with drainage."
+  },
+  {
+    "id": 12,
+    "name": "Sunglasses UV400",
+    "category": "Fashion",
+    "price": 1799,
+    "stock": 9,
+    "emoji": "🕶️",
+    "description": "Full UV protection, polarised lenses."
+  }
+]

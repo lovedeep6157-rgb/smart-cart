@@ -1,0 +1,48 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.info    { background: var(--primary-light); color: var(--primary); }
+.success { background: var(--success-light); color: var(--success); }
+.warning { background: var(--warning-light); color: var(--warning); }
+.danger  { background: var(--danger-light);  color: var(--danger);  }
+
+/* ── Bulk Order badge — premium gold gradient + shimmer ──── */
+.bulk {
+  background: linear-gradient(90deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  box-shadow: 0 2px 10px rgba(245,158,11,0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+.bulk::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -70%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: shimmer 2.4s infinite;
+}
+
+@keyframes shimmer {
+  0%   { left: -70%; }
+  55%  { left: 130%; }
+  100% { left: 130%; }
+}

@@ -1,0 +1,83 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: var(--transition);
+  white-space: nowrap;
+  line-height: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ripple-like active press */
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0);
+  transition: background 0.15s;
+  border-radius: inherit;
+}
+.btn:active:not(:disabled)::after {
+  background: rgba(255,255,255,0.15);
+}
+
+.btn:active:not(:disabled) { transform: scale(0.975); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; pointer-events: none; }
+
+/* ── Variants ────────────────────────────────────────── */
+
+.primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-mid) 100%);
+  color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 12px var(--primary-glow);
+}
+.primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  box-shadow: 0 4px 20px var(--primary-glow);
+  transform: translateY(-1px);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--muted);
+  border: 1.5px solid var(--border);
+}
+.ghost:hover:not(:disabled) {
+  background: #f1f5f9;
+  color: var(--text);
+  border-color: #cbd5e1;
+}
+
+.danger {
+  background: var(--danger-light);
+  color: var(--danger);
+  border: 1px solid #fecaca;
+}
+.danger:hover:not(:disabled) {
+  background: #fee2e2;
+  box-shadow: 0 2px 8px rgba(220,38,38,0.15);
+}
+
+.success {
+  background: var(--success-light);
+  color: var(--success);
+  border: 1px solid #a7f3d0;
+}
+.success:hover:not(:disabled) {
+  background: #d1fae5;
+}
+
+/* ── Sizes ───────────────────────────────────────────── */
+.sm  { font-size: 12px; padding: 7px 14px; border-radius: 9px; }
+.md  { font-size: 13.5px; padding: 10px 20px; }
+.lg  { font-size: 15px; padding: 13px 28px; border-radius: var(--radius-lg); }
+
+.fullWidth { width: 100%; }
