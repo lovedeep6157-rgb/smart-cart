@@ -46,6 +46,14 @@ export default function NavBar() {
           >
             ✅ Checkout
           </NavLink>
+
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => `${styles.tab} ${isActive ? styles.active : ''}`}
+            role="menuitem"
+          >
+            📬 Contact
+          </NavLink>
         </div>
       </div>
     </nav>

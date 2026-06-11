@@ -5,9 +5,10 @@ import Loader from '../components/Loader'
 // Products page loads eagerly (landing page)
 import Products from '../pages/Products'
 
-// Cart and Checkout use React.lazy for code splitting
-const Cart = lazy(() => import('../pages/Cart'))
+// Cart, Checkout, and Contact use React.lazy for code splitting
+const Cart     = lazy(() => import('../pages/Cart'))
 const Checkout = lazy(() => import('../pages/Checkout'))
+const Contact  = lazy(() => import('../pages/Contact'))
 
 export default function AppRoutes() {
   return (
@@ -27,6 +28,14 @@ export default function AppRoutes() {
         element={
           <Suspense fallback={<Loader />}>
             <Checkout />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/contact"
+        element={
+          <Suspense fallback={<Loader />}>
+            <Contact />
           </Suspense>
         }
       />
